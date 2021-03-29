@@ -127,6 +127,7 @@
         newdata: [],
       }
     },
+    
     watch: {
       //realtime search input
       search() {
@@ -138,6 +139,7 @@
       }
 
     },
+
     computed: {
       //retrive data from json file
       data_list() {
@@ -152,7 +154,6 @@
       this.search = '';
       this.showPage();
     },
-
 
     methods: {
 
@@ -183,14 +184,14 @@
             }
           }
         });
-        this.updatePage(0);
+        this.updatePage(0);//update the page to 1(parameter pageNumber is 0 so will get updated to +1)
 
       },
 
-      totalPages() {
+      //calculate the total number of pages based on the number of datas in single page
+      totalPages() { 
         return Math.ceil(this.newdata.length / this.pageSize);
       },
-
 
       showPrev() {
         return this.currentPage == 0 ? false : true;
@@ -204,7 +205,8 @@
         this.currentPage = pageNumber;
         this.showPage();
       },
-
+      
+      //displays how much data to be shown in each page
       showPage() {
         this.pageList = this.newdata.slice(this.currentPage * this.pageSize, (this.currentPage * this
           .pageSize) + this.pageSize);
@@ -213,8 +215,6 @@
         if (this.pageList.length == 0 && this.currentPage > 0) {
           this.updatePage(this.currentPage - 1);
         }
-
-
       }
     }
   };
