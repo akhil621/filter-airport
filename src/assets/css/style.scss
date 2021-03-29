@@ -1,0 +1,241 @@
+@font-face {
+    font-family: Raleway-Bold;
+    src: url("../fonts/Raleway-Bold.ttf");
+}
+
+@font-face {
+    font-family: Raleway-Regular;
+    src: url("../fonts/Raleway-Medium.ttf");
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    font-family: Raleway-Regular;
+}
+
+.container {
+    background-color: rgb(244, 244, 244);
+    padding: 30px;
+}
+
+.container>div {
+    padding: 40px;
+    background-color: white;
+}
+
+.flex,
+.flex-nav {
+    display: flex;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.flex-1-2>div {
+    flex: 2;
+}
+
+.flex-1-3>div {
+    flex: 3;
+}
+
+.main-heading>span:first-child,
+.main-heading>span:last-child {
+    font-size: 3em;
+    font-weight: bold;
+    font-family: Raleway-Bold;
+}
+
+.main-heading>span:last-child {
+    color: #e1e1e1;
+    margin-left: 10px;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.grid-center {
+    margin: auto;
+}
+
+.font-awesome-large {
+    font-size: 1.7em;
+}
+
+.sub-heading {
+    font-family: Raleway-Bold;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.block {
+    display: block;
+}
+
+.checkbox-group {
+    margin-top: 20px;
+
+    label {
+        display: inline-block;
+        position: relative;
+        padding-left: 35px;
+        margin-bottom: 12px;
+        cursor: pointer;
+        font-size: 1.2em;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        margin-right: 20px;
+    }
+
+    label input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+    }
+
+    .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 20px;
+        width: 20px;
+        background-color: white;
+        border: 2px solid black;
+        border-radius: 3px;
+    }
+
+    label:hover input~.checkmark {
+        background-color: #ccc;
+    }
+
+    label input:checked~.checkmark {
+        background-color: black;
+    }
+
+    .checkmark:after {
+        content: "";
+        position: absolute;
+        border: solid grey;
+    }
+
+    label input:checked~.checkmark:after {
+        display: block;
+        border: solid white;
+        border-width: 0 3px 3px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+
+    label .checkmark:after {
+        left: 5px;
+        top: 3px;
+        width: 5px;
+        height: 10px;
+        border-width: 0 3px 3px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+
+}
+
+.search-box {
+    font-size: 1.3em;
+    margin-top: 10px;
+    width: 100%;
+    padding: 3px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid gray;
+    transition: .3s ease-in-out;
+}
+
+.search-box:focus {
+    border-bottom: 2px solid black;
+}
+
+table {
+    margin-top: 30px;
+    width: 100%;
+    border-spacing: 0px;
+
+    thead {
+        tr {
+            background-color: rgb(231, 231, 231);
+            margin: 0;
+
+            th {
+                text-align: left;
+                padding: 20px 10px;
+                font-size: 1.2em;
+            }
+        }
+    }
+
+    tbody {
+        tr {
+            td {
+                text-align: left;
+                padding: 20px 10px;
+                font-size: 1.2em;
+            }
+        }
+
+        tr:nth-child(odd) {
+            background-color: rgb(244, 244, 244);
+        }
+    }
+}
+
+.page-navigation {
+    margin-top: 50px;
+
+    a {
+        color: black;
+        font-size: 1.5em;
+        cursor: pointer;
+        transition: .3s ease;
+        display: inline-block;
+    }
+
+    a:hover {
+        transform: scale(1.2);
+    }
+
+    span {
+        font-size: 1.4em;
+
+        b {
+            font-family: sans-serif;
+
+        }
+    }
+}
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+.number-input {
+    width: 50px;
+    font-size: 1.2em;
+    padding: 10px;
+    margin-left: 10px;
+    border-radius: 10px;
+    outline: none;
+}

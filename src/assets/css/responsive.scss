@@ -1,0 +1,44 @@
+@media(max-width:800px) {
+
+    .main-heading>span:first-child,
+    .main-heading>span:last-child {
+        font-size: 1.3em;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    .container>div {
+        padding: 10px;
+    }
+
+    .flex {
+        display: block;
+
+    }
+
+    .font-awesome-large {
+        font-size: 1.3em;
+    }
+
+    .sub-heading {
+        font-size: 1.1em;
+    }
+
+    .checkbox-group {
+        label {
+            font-size: 1em;
+        }
+    }
+
+    .page-navigation {
+        span {
+            font-size: 1em;
+        }
+    }
+
+    .responsive-block {
+        margin-top: 30px;
+    }
+}
