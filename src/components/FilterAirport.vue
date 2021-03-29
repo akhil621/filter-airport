@@ -96,7 +96,7 @@
           </div>
           <div class="text-center grid-center">
             <span>
-              Showing <b>{{ currentPage + 1 }}-{{totalPages()}}</b> of <b>{{ newdata.length }}</b>
+              Showing <b>{{ currentPage + 1 }}-{{totalPages()}}</b> of <b>{{ newdata.length }}</b> results
             </span>
           </div>
           <div class="text-right">
