@@ -87,6 +87,10 @@
               </template>
             </tbody>
           </table>
+          <br>
+          <div class="text-center" v-if="newdata.length==0">
+            No data found
+          </div>
         </div>
         <div class="flex-nav flex-1-3 flex-row page-navigation" v-if="totalPages()>0">
           <div>
@@ -185,7 +189,6 @@
           }
         });
         this.updatePage(0);//update the page to 1(parameter pageNumber is 0 so will get updated to +1)
-
       },
 
       //calculate the total number of pages based on the number of datas in single page
