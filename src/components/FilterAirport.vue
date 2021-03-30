@@ -48,7 +48,7 @@
             <span class="sub-heading ">
               Data in each pages
             </span>
-            <input type="number" min="1" class="number-input" v-model="pageSize">
+            <input type="number" min="1" class="number-input" v-model.number="pageSize">
           </div>
           <div class="responsive-block">
             <span class="sub-heading block">
